@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: ai-demo
+  ai:
+    azure:
+      openai:
+        api-key: ${API_KEY}
+        endpoint: ${END_POINT}
+        embedding:
+          options:
+            deployment-name: ${EMBEDDING_MODEL_DEPLOYMENT}
+        chat:
+          enabled: true
+          options:
+            deployment-name: ${CHAT_MODEL_DEPLOYMENT}
+            temperature: 0
+sfg:
+  aiapp:
+    vectorStorePath: /tmp/vectorstore.json
+    documentsToLoad:
+      - classpath:/movies500.csv
+#  ai:
+#    openai:
+#      api-key: sk-f5d632c705b041b39163e0f13832e910
+#      base-url: https://api.deepseek.com
+#      chat:
+#        enabled: true
+#
+#        options:
+#          temperature: 0.4
+#          model: deepseek-chat
+
