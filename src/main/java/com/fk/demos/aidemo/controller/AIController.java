@@ -21,7 +21,7 @@ public class AIController {
 //        this.chatModel = chatModel;
 //    }
 
-    @PostMapping(consumes = "plain/text")
+    @PostMapping(consumes = "text/plain")
     public String askQuestions(@RequestBody String question){
         PromptTemplate promptTemplate = new PromptTemplate(question);
         Prompt prompt = promptTemplate.create();
